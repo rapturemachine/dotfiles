@@ -1,0 +1,9 @@
+# Increase volume
+"pactl set-sink-volume 1 +1%"
+	XF86AudioRaiseVolume
+
+# Decrease volume
+# The -- says "after these dashes, I'm done with the CLI flags, do not interpret this as a flag"
+# Otherwise it thinks -1 is an option being passed in
+"pactl set-sink-volume 1 -- -1%"
+	XF86AudioLowerVolume
